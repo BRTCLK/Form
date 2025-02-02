@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Örneği</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .radio-label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Kullanıcı Bilgileri Formu</h1>
+
+        <form action="#" method="post">
+            <!-- Ad ve Soyad -->
+            <div class="form-group">
+                <label for="first-name">Ad:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Soyad:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <!-- E-posta -->
+            <div class="form-group">
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Parola -->
+            <div class="form-group">
+                <label for="password">Parola:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- Cinsiyet -->
+            <div class="form-group">
+                <label for="gender">Cinsiyet:</label><br>
+                <label class="radio-label" for="male">
+                    <input type="radio" id="male" name="gender" value="Erkek"> Erkek
+                </label>
+                <label class="radio-label" for="female">
+                    <input type="radio" id="female" name="gender" value="Kadın"> Kadın
+                </label>
+            </div>
+
+            <!-- Favori Meyve -->
+            <div class="form-group">
+                <label for="fruit">Favori Meyveniz:</label>
+                <select id="fruit" name="fruit" required>
+                    <option value="elma">Elma</option>
+                    <option value="muz">Muz</option>
+                    <option value="cilek">Çilek</option>
+                </select>
+            </div>
+
+            <!-- Mesaj -->
+            <div class="form-group">
+                <label for="message">Mesaj:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+            </div>
+
+            <!-- Gönder Düğmesi -->
+            <input type="submit" value="Gönder">
+        </form>
+    </div>
+</body>
+</html>
